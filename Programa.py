@@ -1,5 +1,5 @@
-primero = int(input('Ingresa un número sin parte decimal '))
-segundo = int(input('Ingresa otro número sin parte decimal '))
+primero = float(input('Ingresa un número con parte decimal '))
+segundo = float(input('Ingresa otro número con parte decimal '))
 
 resultado = primero + segundo
 
