@@ -1,6 +1,7 @@
-primero = float(input('Ingresa un número con parte decimal '))
-segundo = float(input('Ingresa otro número con parte decimal '))
+parcial1 = float(input('Ingresa calificación de parcial 1 '))
+parcial2 = float(input('Ingresa calificación de parcial 2 '))
+parcial3 = float(input('Ingresa calificación de parcial 3 '))
 
-resultado = primero + segundo
+promedio = (parcial1 + parcial2 + parcial3) / 3
 
-print(resultado)
+print(promedio)
