@@ -1,6 +1,6 @@
-nombres = input('Ingresa tu(s) nombre(s) ')
-apellidos = input('Ingresa tu(s) apellidos(s) ')
+primero = int(input('Ingresa un número sin parte decimal '))
+segundo = int(input('Ingresa otro número sin parte decimal '))
 
-completo = nombres + ' ' + apellidos
+resultado = primero + segundo
 
-print(completo)
+print(resultado)
