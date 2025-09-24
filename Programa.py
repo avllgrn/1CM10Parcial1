@@ -1,25 +1,15 @@
 import math
 
 # Se define la funcion
-def areaDeCirculo(radio):
-    # Se calcula la operación y se retorna el resultado
-    return math.pi * radio**2
+def gradosARadianes():
+    # Se piden datos
+    grados = float(input('Ingresa los grados '))
 
-# Se define la funcion
-def perimetroDeCirculo(radio):
-    # Se calcula la operación y se retorna el resultado
-    return 2 * math.pi *radio
+    # Se calcula la operación
+    radianes = grados * math.pi / 180
 
+    # Se muestra el resultado
+    print(f'{grados}° = {radianes} rad')
 
-# Se piden datos
-radio = float(input('Ingresa el radio del círculo '))
-
-# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
-area = areaDeCirculo(radio)
-# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
-perimetro = perimetroDeCirculo(radio)
-
-# Se muestra el resultado
-print(f'radio = {radio}')
-print(f'area = {area}')
-print(f'perimetro = {perimetro}')
+# Se invoca la funcion
+gradosARadianes()
