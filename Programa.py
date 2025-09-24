@@ -1,52 +1,57 @@
 # Se define la funcion
-def ifGeneroEstadoCivil():
-    genero = input('Ingresa tu género (f/m) ')
-    estadoCivil = input('Ingresa tu estado civil (s/c/d/v) ')
-
+def ifGeneroEstadoCivil(genero, estadoCivil):
+    # Se calcula la operación y se retorna el resultado
     if genero == 'f':
         if estadoCivil == 's':
-            print('Estado civil soltera')
+            return 'Estado civil soltera'
         else:
             if estadoCivil == 'c':
-                print('Estado civil casada')
+                return 'Estado civil casada'
             else:
                 if estadoCivil == 'd':
-                    print('Estado civil divorciada')
+                    return 'Estado civil divorciada'
                 else:
                     if estadoCivil == 'v':
-                        print('Estado civil viuda')
+                        return 'Estado civil viuda'
                     else:
-                        print('Género femenino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
+                        return 'Género femenino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo'
     else:
         if genero == 'm':
             if estadoCivil == 's':
-                print('Estado civil soltero')
+                return 'Estado civil soltero'
             else:
                 if estadoCivil == 'c':
-                    print('Estado civil casado')
+                    return 'Estado civil casado'
                 else:
                     if estadoCivil == 'd':
-                        print('Estado civil divorciado')
+                        return 'Estado civil divorciado'
                     else:
                         if estadoCivil == 'v':
-                            print('Estado civil viudo')
+                            return 'Estado civil viudo'
                         else:
-                            print('Género masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
+                            return 'Género masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo'
         else:
             if estadoCivil == 's':
-                print('Genero no es ni femenino ni masculino, Estado civil soltero')
+                return 'Genero no es ni femenino ni masculino, Estado civil soltero'
             else:
                 if estadoCivil == 'c':
-                    print('Genero no es ni femenino ni masculino, Estado civil casado')
+                    return 'Genero no es ni femenino ni masculino, Estado civil casado'
                 else:
                     if estadoCivil == 'd':
-                        print('Genero no es ni femenino ni masculino, Estado civil divorciado')
+                        return 'Genero no es ni femenino ni masculino, Estado civil divorciado'
                     else:
                         if estadoCivil == 'v':
-                            print('Genero no es ni femenino ni masculino, Estado civil viudo')
+                            return 'Genero no es ni femenino ni masculino, Estado civil viudo'
                         else:
-                            print('Genero no es ni femenino ni masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
+                            return 'Genero no es ni femenino ni masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo'
 
 
-# Se invoca la funcion
-ifGeneroEstadoCivil()
+# Se piden datos
+genero = input('Ingresa tu género (f/m) ')
+estadoCivil = input('Ingresa tu estado civil (s/c/d/v) ')
+
+# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
+mensaje = ifGeneroEstadoCivil(genero, estadoCivil)
+
+# Se muestra el resultado
+print(f'{mensaje}')
