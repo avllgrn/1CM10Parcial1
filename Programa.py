@@ -1,9 +1,15 @@
-genero = input('Ingresa tu género (f/m) ')
+estadoCivil = input('Ingresa tu estado civil (s/c/d/v) ')
 
-if genero == 'f':
-    print('Genero femenino')
+if estadoCivil == 's':
+    print('Estado civil soltero')
 else:
-    if genero == 'm':
-        print('Genero masculino')
+    if estadoCivil == 'c':
+        print('Estado civil casado')
     else:
-        print('Genero no es ni femenino ni masculino')
+        if estadoCivil == 'd':
+            print('Estado civil divorciado')
+        else:
+            if estadoCivil == 'v':
+                print('Estado civil viudo')
+            else:
+                print('Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
