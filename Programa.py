@@ -1,6 +1,9 @@
-edad = int(input('Ingresa tu edad '))
+genero = input('Ingresa tu género (f/m) ')
 
-if edad < 18:
-    print('Eres menor de edad')
+if genero == 'f':
+    print('Genero femenino')
 else:
-    print('NO eres menor de edad')
+    if genero == 'm':
+        print('Genero masculino')
+    else:
+        print('Genero no es ni femenino ni masculino')
