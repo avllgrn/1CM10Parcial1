@@ -1,7 +1,15 @@
-parcial1 = float(input('Ingresa calificación de parcial 1 '))
-parcial2 = float(input('Ingresa calificación de parcial 2 '))
-parcial3 = float(input('Ingresa calificación de parcial 3 '))
+# Se define la funcion
+def sumaDeDosNumeros():
+    # Se piden datos
+    primero = float(input('Ingresa un número '))
+    segundo = float(input('Ingresa otro número '))
 
-promedio = (parcial1 + parcial2 + parcial3) / 3
+    # Se calcula la operación
+    resultado = primero + segundo
 
-print(promedio)
+    # Se muestra el resultado
+    print(f'{primero} + {segundo} = {resultado}')
+
+
+# Se invoca la funcion
+sumaDeDosNumeros()
