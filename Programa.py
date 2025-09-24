@@ -1,57 +1,25 @@
+import math
+
 # Se define la funcion
-def ifGeneroEstadoCivil(genero, estadoCivil):
-    # Se calcula la operación y se retorna el resultado
-    if genero == 'f':
-        if estadoCivil == 's':
-            return 'Estado civil soltera'
+def formulaGeneral():
+    a = float(input('Ingresa a '))
+    b = float(input('Ingresa b '))
+    c = float(input('Ingresa c '))
+
+    disc = math.pow(b,2) - 4*a*c
+    if disc >= 0:
+        if a != 0:
+            x1 = (-b+math.sqrt(disc)) / (2*a)
+            x2 = (-b-math.sqrt(disc)) / (2*a)
+            print(f'a  = {a}')
+            print(f'b  = {b}')
+            print(f'c  = {c}')
+            print(f'x1 = {x1}')
+            print(f'x2 = {x2}')
         else:
-            if estadoCivil == 'c':
-                return 'Estado civil casada'
-            else:
-                if estadoCivil == 'd':
-                    return 'Estado civil divorciada'
-                else:
-                    if estadoCivil == 'v':
-                        return 'Estado civil viuda'
-                    else:
-                        return 'Género femenino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo'
+            print('Raíces indeterminadas')
     else:
-        if genero == 'm':
-            if estadoCivil == 's':
-                return 'Estado civil soltero'
-            else:
-                if estadoCivil == 'c':
-                    return 'Estado civil casado'
-                else:
-                    if estadoCivil == 'd':
-                        return 'Estado civil divorciado'
-                    else:
-                        if estadoCivil == 'v':
-                            return 'Estado civil viudo'
-                        else:
-                            return 'Género masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo'
-        else:
-            if estadoCivil == 's':
-                return 'Genero no es ni femenino ni masculino, Estado civil soltero'
-            else:
-                if estadoCivil == 'c':
-                    return 'Genero no es ni femenino ni masculino, Estado civil casado'
-                else:
-                    if estadoCivil == 'd':
-                        return 'Genero no es ni femenino ni masculino, Estado civil divorciado'
-                    else:
-                        if estadoCivil == 'v':
-                            return 'Genero no es ni femenino ni masculino, Estado civil viudo'
-                        else:
-                            return 'Genero no es ni femenino ni masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo'
+        print('Raíces imaginarias')
 
-
-# Se piden datos
-genero = input('Ingresa tu género (f/m) ')
-estadoCivil = input('Ingresa tu estado civil (s/c/d/v) ')
-
-# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
-mensaje = ifGeneroEstadoCivil(genero, estadoCivil)
-
-# Se muestra el resultado
-print(f'{mensaje}')
+# Se invoca la funcion
+formulaGeneral()
