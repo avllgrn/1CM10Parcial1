@@ -1,16 +1,21 @@
 import math
 
 # Se define la funcion
-def radianesAGrados(grados):
-    # Se calcula la operación y se retorna el resultado
-    return radianes * 180 /  math.pi
+def funcionesTrigonometricas():
+    # Se piden datos
+    grados = float(input('Ingresa los grados '))
 
+    # Se calcula la operación
+    radianes = grados * math.pi / 180
+    seno = math.sin(radianes)
+    coseno = math.cos(radianes)
+    tangente = math.tan(radianes)
 
-# Se piden datos
-radianes = float(input('Ingresa los radianes '))
+    # Se muestra el resultado
+    print(f'grados = {grados}')
+    print(f'seno({grados})     = {seno}')
+    print(f'coseno({grados})   = {coseno}')
+    print(f'tangente({grados}) = {tangente}')
 
-# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
-grados = radianesAGrados(radianes)
-
-# Se muestra el resultado
-print(f'{radianes} rad = {grados}°')
+# Se invoca la funcion
+funcionesTrigonometricas()
