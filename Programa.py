@@ -1,17 +1,14 @@
 # Se define la funcion
-def ifMenorDeEdad(edad):
-    # Se calcula la operación y se retorna el resultado
-    if edad < 18:
-        return 'Eres menor de edad'
+def ifGenero():
+    genero = input('Ingresa tu género (f/m) ')
+
+    if genero == 'f':
+        print('Genero femenino')
     else:
-        return 'NO eres menor de edad'
+        if genero == 'm':
+            print('Genero masculino')
+        else:
+            print('Genero no es ni femenino ni masculino')
 
-
-# Se piden datos
-edad = int(input('Ingresa tu edad '))
-
-# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
-mensaje = ifMenorDeEdad(edad)
-
-# Se muestra el resultado
-print(f'{mensaje}')
+# Se invoca la funcion
+ifGenero()
