@@ -1,14 +1,20 @@
 # Se define la funcion
-def ifGenero():
-    genero = input('Ingresa tu género (f/m) ')
-
+def ifGenero(genero):
+    # Se calcula la operación y se retorna el resultado
     if genero == 'f':
-        print('Genero femenino')
+        return 'Genero femenino'
     else:
         if genero == 'm':
-            print('Genero masculino')
+            return 'Genero masculino'
         else:
-            print('Genero no es ni femenino ni masculino')
+            return 'Genero no es ni femenino ni masculino'
 
-# Se invoca la funcion
-ifGenero()
+
+# Se piden datos
+genero = input('Ingresa tu género ')
+
+# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
+mensaje = ifGenero(genero)
+
+# Se muestra el resultado
+print(f'{mensaje}')
