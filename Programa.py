@@ -1,23 +1,19 @@
 # Se define la funcion
-def areaDeCuadro(lado):
-    # Se calcula la operación y se retorna el resultado
-    return lado**2
+def areaYPerimetroDeRectangulo():
+    # Se piden datos
+    base = float(input('Ingresa la base del rectangulo '))
+    altura = float(input('Ingresa la altura del rectangulo '))
 
-# Se define la funcion
-def perimetroDeCuadro(lado):
-    # Se calcula la operación y se retorna el resultado
-    return 4*lado
+    # Se calcula la operación
+    area = base*altura
+    perimetro = 2*base + 2*altura
+
+    # Se muestra el resultado
+    print(f'base = {base}')
+    print(f'altura = {altura}')
+    print(f'area = {area}')
+    print(f'perimetro = {perimetro}')
 
 
-# Se piden datos
-lado = float(input('Ingresa el lado del cuadro '))
-
-# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
-area = areaDeCuadro(lado)
-# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
-perimetro = perimetroDeCuadro(lado)
-
-# Se muestra el resultado
-print(f'lado = {lado}')
-print(f'area = {area}')
-print(f'perimetro = {perimetro}')
+# Se invoca la funcion
+areaYPerimetroDeRectangulo()
