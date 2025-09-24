@@ -1,20 +1,26 @@
 # Se define la funcion
-def ifEstadoCivil():
-    estadoCivil = input('Ingresa tu estado civil (s/c/d/v) ')
-
+def ifEstadoCivil(estadoCivil):
+    # Se calcula la operación y se retorna el resultado
     if estadoCivil == 's':
-        print('Estado civil soltero')
+        return 'Estado civil soltero'
     else:
         if estadoCivil == 'c':
-            print('Estado civil casado')
+            return 'Estado civil casado'
         else:
             if estadoCivil == 'd':
-                print('Estado civil divorciado')
+                return 'Estado civil divorciado'
             else:
                 if estadoCivil == 'v':
-                    print('Estado civil viudo')
+                    return 'Estado civil viudo'
                 else:
-                    print('Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
+                    return 'Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo'
 
-# Se invoca la funcion
-ifEstadoCivil()
+
+# Se piden datos
+estadoCivil = input('Ingresa tu estado civil (s/c/d/v) ')
+
+# Se invoca la funcion, se le envían argumentos, se recibe y se guarda resultado
+mensaje = ifEstadoCivil(estadoCivil)
+
+# Se muestra el resultado
+print(f'{mensaje}')
