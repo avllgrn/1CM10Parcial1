@@ -1,39 +1,59 @@
-genero = input('Ingresa tu género (f/m) ')
-estadoCivil = input('Ingresa tu estado civil (s/c/d/v) ')
+import math
 
-if genero == 'f':
+# Se define la funcion
+def areaYPerimetroDeCirculo():
+    # Se piden datos
+    radio = float(input('Ingresa el radio del círculo '))
 
-    if estadoCivil == 's':
-        print('Estado civil soltera')
-    elif estadoCivil == 'c':
-        print('Estado civil casada')
-    elif estadoCivil == 'd':
-        print('Estado civil divorciada')
-    elif estadoCivil == 'v':
-        print('Estado civil viuda')
-    else:
-        print('Género femenino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
+    # Se calcula la operación
+    area = math.pi * radio**2
+    perimetro = 2 * math.pi * radio
 
-elif genero == 'm':
-    if estadoCivil == 's':
-        print('Estado civil soltero')
-    elif estadoCivil == 'c':
-        print('Estado civil casado')
-    elif estadoCivil == 'd':
-        print('Estado civil divorciado')
-    elif estadoCivil == 'v':
-        print('Estado civil viudo')
-    else:
-        print('Género masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
+    # Se muestra el resultado
+    print(f'radio = {radio}')
+    print(f'area = {area}')
+    print(f'perimetro = {perimetro}')
 
+# Se define la funcion
+def gradosARadianes():
+    # Se piden datos
+    grados = float(input('Ingresa los grados '))
+
+    # Se calcula la operación
+    radianes = grados * math.pi / 180
+
+    # Se muestra el resultado
+    print(f'{grados}° = {radianes} rad')
+
+# Se define la funcion
+def funcionesTrigonometricas():
+    # Se piden datos
+    grados = float(input('Ingresa los grados '))
+
+    # Se calcula la operación
+    radianes = grados * math.pi / 180
+    seno = math.sin(radianes)
+    coseno = math.cos(radianes)
+    tangente = math.tan(radianes)
+
+    # Se muestra el resultado
+    print(f'grados = {grados}')
+    print(f'seno({grados})     = {seno}')
+    print(f'coseno({grados})   = {coseno}')
+    print(f'tangente({grados}) = {tangente}')
+
+# Menú de opciones que invoca a la función deseada por el usuario
+print('1. Área y perímetro de un Círculo')
+print('2. Conversión de grados a radianes')
+print('3. Funciones Trigonométricas')
+opcion = int(input('Qué opción quieres? ')) # Se pide la opción
+
+# La función invocada está condicionada por la opción elegida por el usuario
+if opcion == 1:
+    areaYPerimetroDeCirculo()
+elif opcion == 2:
+    gradosARadianes()
+elif opcion == 3:
+    funcionesTrigonometricas()
 else:
-    if estadoCivil == 's':
-        print('Genero no es ni femenino ni masculino, Estado civil soltero')
-    elif estadoCivil == 'c':
-        print('Genero no es ni femenino ni masculino, Estado civil casado')
-    elif estadoCivil == 'd':
-        print('Genero no es ni femenino ni masculino, Estado civil divorciado')
-    elif estadoCivil == 'v':
-        print('Genero no es ni femenino ni masculino, Estado civil viudo')
-    else:
-        print('Genero no es ni femenino ni masculino, Estado civil no es ni soltero, ni casado, ni divorciado, ni viudo')
+    print('Opcion invalida...')
